@@ -17,11 +17,33 @@
 
 .filters {
     display: flex;
-    gap: 12px;
-    align-items: center;
+    gap: 16px;
+    align-items: flex-end;
     flex-wrap: wrap;
     margin-bottom: 8px;
     position: relative;
+    width: 100%;
+}
+
+.filterSpacer {
+    flex: 1;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filterLabel {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .filterWrapper {
@@ -67,29 +89,43 @@
     cursor: pointer;
     font-size: 14.5px;
     min-width: 100px;
-    justify-content: space-between;
+    height: 38px;
+    box-sizing: border-box;
 }
 
 .filterBtn:hover {
     background-color: #1a1b4b;
 }
 
-.dateInputContainer {
-    position: relative;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
+.dateInputWrapper {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 14.5px;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.dateInputContainer:hover {
-    background-color: #1a1b4b;
+.datePickerInput {
+    background-color: white;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-weight: 600;
+    font-size: 14px;
+    width: 160px;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: 38px; /* Fixed height for alignment */
+    box-sizing: border-box;
+}
+
+.datePickerInput:hover {
+    border-color: var(--secondary-color);
+}
+
+.datePickerInput:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(13, 11, 77, 0.1);
 }
 
 .dateTimeFilters {
@@ -126,20 +162,105 @@
     gap: 8px;
 }
 
-/* Calendar Popup Styles */
-.calendarPopup {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 8px;
+/* Custom Calendar overrides for react-datepicker */
+.customCalendar {
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    font-family: inherit !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+:global(.react-datepicker__header) {
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding-top: 12px !important;
+}
+
+:global(.react-datepicker__current-month) {
+    color: #1a1b4b !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+}
+
+:global(.react-datepicker__day-name) {
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+    width: 32px !important;
+    line-height: 32px !important;
+}
+
+:global(.react-datepicker__day) {
+    color: #475569 !important;
+    width: 32px !important;
+    line-height: 32px !important;
+    border-radius: 6px !important;
+    margin: 2px !important;
+    transition: all 0.2s !important;
+}
+
+:global(.react-datepicker__day:hover) {
+    background-color: #f1f5f9 !important;
+    color: #1a1b4b !important;
+}
+
+:global(.react-datepicker__day--selected) {
+    background-color: #0d0b4d !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+:global(.react-datepicker__day--keyboard-selected) {
+    background-color: #e3f2fd !important;
+    color: #1a1b4b !important;
+}
+
+:global(.react-datepicker__day--today) {
+    font-weight: 800 !important;
+    color: #1a1b4b !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+:global(.react-datepicker__navigation) {
+    top: 12px !important;
+}
+
+:global(.react-datepicker__navigation-icon::before) {
+    border-color: #94a3b8 !important;
+    border-width: 2px 2px 0 0 !important;
+}
+
+.timeInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timeRangeContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeInput {
+    padding: 8px 12px !important;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    width: 280px;
-    padding: 16px;
-    z-index: 1000;
+    font-size: 13.5px;
+    width: 125px;
+    font-weight: 600;
     color: #333;
-    border: 1px solid #eee;
+    transition: border-color 0.2s;
+    height: 38px; /* Match date picker height */
+    box-sizing: border-box;
+}
+
+.timeInput:hover, .timeInput:focus {
+    border-color: var(--secondary-color);
+    outline: none;
 }
 
 .calendarHeader {
@@ -361,8 +482,10 @@
 
 .modalOverlay {
     position: fixed;
-    top: 60px; /* Topbar height */
-    left: var(--sidebar-width); /* Sidebar width */
+    top: 60px;
+    /* Topbar height */
+    left: var(--sidebar-width);
+    /* Sidebar width */
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
@@ -525,38 +648,26 @@
         gap: 16px;
     }
 
-    .filterWrapper {
+    .filterSpacer {
+        display: none;
+    }
+
+    .filterGroup {
         width: 100%;
     }
 
-    .filterBtn {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .dateTimeFilters {
-        margin-left: 0 !important;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .dateInputContainer {
-        width: 100%;
-        justify-content: space-between;
+    .filterBtn, .datePickerInput, .timeInput {
+        width: 100% !important;
     }
 
     .timeRangeContainer {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        display: flex;
+        gap: 8px;
         align-items: center;
-        gap: 12px;
     }
 
     .timeInput {
-        width: 100% !important;
         flex: 1;
     }
 

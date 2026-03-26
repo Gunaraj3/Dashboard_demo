@@ -81,15 +81,23 @@
 .logoutBtn {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    padding: 1rem 2rem;
+    margin: 0 -2rem; /* Negate footerWrap padding to span full width like nav items */
+    gap: 1.2rem;
     color: #a0a0c0;
     font-weight: 500;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    width: calc(100% + 4rem);
+    text-align: left;
 }
 
 .logoutBtn:hover {
-    color: white;
+
+    color: #ff4444;
 }
 
 .footer {

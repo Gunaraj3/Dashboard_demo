@@ -16,7 +16,21 @@
 .lineSelectorRow {
     display: flex;
     gap: 16px;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filterLabel {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    margin-left: 2px;
 }
 
 .topSection {
@@ -136,10 +150,10 @@
 .lineSelector {
     background-color: var(--secondary-color);
     color: white;
-    padding: 8px 14px;
+    padding: 0 14px;
     border-radius: 6px;
     font-size: 0.9rem;
-    margin-bottom: 0px;
+    height: 38px;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -147,6 +161,7 @@
     font-weight: 600;
     transition: background 0.2s;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .lineSelector:hover {

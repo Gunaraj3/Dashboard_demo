@@ -73,10 +73,6 @@ export default function ReportsPage() {
   const [totalItems, setTotalItems] = useState(150);
   const [latestHeartbeat, setLatestHeartbeat] = useState(null);
 
-  const calendarRef = useRef(null);
-  const shiftRef = useRef(null);
-  const lineRef = useRef(null);
-  const cameraRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -157,19 +153,13 @@ export default function ReportsPage() {
 
         <ReportFilters 
           selectedShift={selectedShift} setSelectedShift={handleShiftChange}
-          showShiftDropdown={false} setShowShiftDropdown={() => {}}
-          shiftRef={shiftRef}
           selectedLine={selectedLine} setSelectedLine={handleLineChange}
-          showLineDropdown={false} setShowLineDropdown={() => {}}
-          lineRef={lineRef} lines={lines} setCurrentPage={handlePageChange}
+          lines={lines} setCurrentPage={handlePageChange}
           selectedCamera={selectedCamera} setSelectedCamera={handleCameraChange}
-          showCameraDropdown={false} setShowCameraDropdown={() => {}}
-          cameraRef={cameraRef} cameras={cameras}
+          cameras={cameras}
           selectedDate={selectedDate} setSelectedDate={handleDateChange}
-          showCalendar={false} setShowCalendar={() => {}}
-          calendarRef={calendarRef}
-          startTime={startTime} setStartTime={() => {}}
-          endTime={endTime} setEndTime={() => {}}
+          startTime={startTime} setStartTime={setStartTime}
+          endTime={endTime} setEndTime={setEndTime}
         />
 
         <ReportTable 
