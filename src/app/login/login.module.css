@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0.8rem;
+    background-color: #f5f7fa;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.brandRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #009999;
+    letter-spacing: 0.05em;
+}
+
+.logoImg {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.subHeader {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0.5rem;
+}
+
+.loginCard {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #009999;
+}
+
+.eyeIcon {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    color: #888;
+    display: flex;
+    align-items: center;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.loginButton:hover {
+    background-color: #18115b;
+}
+
+.loginButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin: 1rem;
+}
+
+.footer p {
+    margin: 0.2rem 0;
+}
+
+.crimson {
+    color: #dc143c;
+    font-weight: 600;
+}
+
+.tech {
+    color: #0e0a30;
+    font-weight: 600;
+}
+
+.siemens {
+    color: #009999;
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.errorMessage {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid #ffcdd2;
+}

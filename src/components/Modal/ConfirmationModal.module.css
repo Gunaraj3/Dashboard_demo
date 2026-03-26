@@ -1,0 +1,89 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal {
+    background-color: var(--white);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    padding: 32px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #fff5f5;
+    color: #dc143c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.message {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.btn:focus,
+.btn:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 1px;
+}
+
+.cancelBtn {
+    background-color: #f1f3f5;
+    color: var(--text-dark);
+}
+
+.cancelBtn:hover {
+    background-color: #e9ecef;
+}
+
+.confirmBtn {
+    background-color: #dc143c;
+    color: white;
+}
+
+.confirmBtn:hover {
+    background-color: #c92a2a;
+    box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+}

@@ -1,0 +1,126 @@
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: #0e0a30;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.logoSection {
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #009999;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.closeBtn {
+    display: none;
+    color: white;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #a0a0c0;
+    text-decoration: none;
+    transition: all 0.2s;
+    gap: 1.2rem;
+    font-weight: 500;
+}
+
+.navItem:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.navItem.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left: 4px solid #009999;
+    padding-left: calc(2rem - 4px);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-size: 1rem;
+}
+
+.footerWrap {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #a0a0c0;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.logoutBtn:hover {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.devBy {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .closeBtn {
+        display: block;
+    }
+
+    .sidebarIcon {
+        display: none;
+    }
+}
