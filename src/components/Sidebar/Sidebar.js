@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutGrid, FileText, Calendar, LogOut, X } from 'lucide-react';
+import { LayoutGrid, FileText, LogOut, X } from 'lucide-react';
 import styles from './Sidebar.module.css';
 import { clsx } from 'clsx';
 
@@ -17,7 +17,7 @@ export default function Sidebar({ isOpen, onClose, onLogout }) {
   return (
     <aside className={clsx(styles.sidebar, isOpen && styles.show)}>
       <div className={styles.logoSection}>
-        <h1 className={styles.logo}>SIEMENS</h1>
+        <h1 className={styles.logo}>NAME</h1>
         <button className={styles.closeBtn} onClick={onClose}>
           <X size={24} />
         </button>
@@ -44,8 +44,8 @@ export default function Sidebar({ isOpen, onClose, onLogout }) {
         </button>
 
         <div className={styles.footer}>
-          <p className={styles.devBy}>Developed By <span className={styles.crimson}>Crimson </span><span className={styles.white}>Tech</span></p>
-          <p className={styles.licenseBy}>License By <span className={styles.siemens}>Siemens</span></p>
+          <p className={styles.devBy}>Developed By <span className={styles.crimson}>Name </span><span className={styles.white}>Tech</span></p>
+          <p className={styles.licenseBy}>License By <span className={styles.siemens}>Name</span></p>
         </div>
       </div>
     </aside>

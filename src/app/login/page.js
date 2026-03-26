@@ -46,10 +46,10 @@ export default function LoginPage() {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.brandRow}>
-          <h1 className={styles.logo}>SIEMENS</h1>
-          <img src="/images/munjal.jpg" alt="munjal" className={styles.logoImg} />
+          <h1 className={styles.logo}>NAME</h1>
+          {/* <img src="/images/munjal.jpg" alt="munjal" className={styles.logoImg} /> */}
         </div>
-        <p className={styles.subHeader}>SIEMENS PRODUCTION TRACEABILITY SYSTEM</p>
+        <p className={styles.subHeader}>NAME PRODUCTION TRACEABILITY SYSTEM</p>
       </header>
 
       <div className={styles.loginCard}>
@@ -99,8 +99,8 @@ export default function LoginPage() {
       </div>
 
       <footer className={styles.footer}>
-        <p>Developed By <span className={styles.crimson}>Crimson </span><span className={styles.tech}>Tech</span></p>
-        <p className={styles.italic}>License By <span className={styles.siemens}>Siemens</span></p>
+        <p>Developed By <span className={styles.crimson}>Name </span><span className={styles.tech}>Tech</span></p>
+        <p className={styles.italic}>License By <span className={styles.siemens}>Name</span></p>
       </footer>
     </div>
   );
