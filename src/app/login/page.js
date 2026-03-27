@@ -15,13 +15,13 @@ export default function LoginPage() {
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    setIsCheckingAuth(false);
-  }, [router]);
+  // useEffect(() => {
+  //   setIsCheckingAuth(false);
+  // }, [router]);
 
-  if (isCheckingAuth) {
-    return null;
-  }
+  // if (isCheckingAuth) {
+  //   return null;
+  // }
 
   const handleLogin = async (e) => {
     e.preventDefault();
