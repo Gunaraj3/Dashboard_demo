@@ -82,7 +82,8 @@
     display: flex;
     align-items: center;
     padding: 1rem 2rem;
-    margin: 0 -2rem; /* Negate footerWrap padding to span full width like nav items */
+    margin: 0 -2rem;
+    /* Negate footerWrap padding to span full width like nav items */
     gap: 1.2rem;
     color: #a0a0c0;
     font-weight: 500;
@@ -115,7 +116,7 @@
     font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .sidebar {
         transform: translateX(-100%);
     }

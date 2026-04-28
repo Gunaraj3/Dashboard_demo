@@ -114,7 +114,8 @@
     width: 160px;
     cursor: pointer;
     transition: all 0.2s;
-    height: 38px; /* Fixed height for alignment */
+    height: 38px;
+    /* Fixed height for alignment */
     box-sizing: border-box;
 }
 
@@ -254,11 +255,13 @@
     font-weight: 600;
     color: #333;
     transition: border-color 0.2s;
-    height: 38px; /* Match date picker height */
+    height: 38px;
+    /* Match date picker height */
     box-sizing: border-box;
 }
 
-.timeInput:hover, .timeInput:focus {
+.timeInput:hover,
+.timeInput:focus {
     border-color: var(--secondary-color);
     outline: none;
 }
@@ -497,7 +500,7 @@
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .modalOverlay {
         left: 0;
     }
@@ -641,7 +644,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .filters {
         flex-direction: column;
         align-items: stretch;
@@ -656,7 +659,9 @@
         width: 100%;
     }
 
-    .filterBtn, .datePickerInput, .timeInput {
+    .filterBtn,
+    .datePickerInput,
+    .timeInput {
         width: 100% !important;
     }
 
