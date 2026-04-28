@@ -170,3 +170,69 @@
     text-align: center;
     border: 1px solid #ffcdd2;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .loginCard { max-width: 380px; padding: 1.8rem; }
+    .logo { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0.5rem; justify-content: center; gap: 1rem; }
+    .logo { font-size: 1.8rem; }
+    .logoImg { width: 40px; height: 40px; }
+    .subHeader { font-size: 0.75rem; text-align: center; }
+    .loginCard { max-width: 90%; padding: 1.5rem; }
+    .title { font-size: 1.3rem; }
+    .input { padding: 0.7rem 0.9rem; font-size: 0.9rem; }
+    .loginButton { padding: 0.8rem; font-size: 0.9rem; }
+    .footer { font-size: 0.7rem; }
+    .eyeIcon svg { width: 18px; height: 18px; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0.4rem; }
+    .logo { font-size: 1.5rem; }
+    .logoImg { width: 32px; height: 32px; }
+    .subHeader { font-size: 0.65rem; word-break: break-word; }
+    .loginCard { max-width: 95%; padding: 1.2rem; border-radius: 8px; }
+    .title { font-size: 1.2rem; margin-bottom: 1rem; }
+    .formGroup { margin-bottom: 1rem; }
+    .label { font-size: 0.8rem; }
+    .input { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+    .loginButton { padding: 0.7rem; font-size: 0.85rem; margin-top: 0.6rem; }
+    .footer { font-size: 0.6rem; }
+    .errorMessage { padding: 0.5rem; font-size: 0.8rem; }
+}
+
+@media (max-width: 360px) {
+    .logo { font-size: 1.3rem; }
+    .loginCard { padding: 1rem; }
+    .title { font-size: 1.1rem; }
+}
+
+/* Fix for larger screens - keeps content centered */
+@media (min-width: 1200px) {
+    .container {
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .header {
+        margin-top: 0;
+    }
+    
+    .loginCard {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+/* Landscape mode for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container { min-height: auto; padding: 0.5rem; justify-content: center; }
+    .logo { font-size: 1.3rem; }
+    .loginCard { padding: 0.8rem; }
+    .formGroup { margin-bottom: 0.8rem; }
+    .title { font-size: 1rem; }
+}
